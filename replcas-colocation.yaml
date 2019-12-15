@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-cache
+spec:
+  selector:
+    matchLabels:
+      app: store
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: store
+    spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - store
+            topologyKey: "kubernetes.io/hostname"
+      containers:
+      - name: redis-server
+        image: redis:3.2-alpine
+# selector label app=store. The deployment has PodAffinity configured to ensure the scheduler does co-locate replicas on a single node.
+#redis-cache-5f4f55fc9b-4h4k5        1/1     Running     0          2m27s   10.1.1.29   sesh   <none>           <none>
+#redis-cache-5f4f55fc9b-9m6gt        1/1     Running     0          2m27s   10.1.1.30   sesh   <none>           <none>
+#redis-cache-5f4f55fc9b-zbvb8        1/1     Running     0          2m27s   10.1.1.28   sesh   <none>           <none>
+# as shown above all pods are running in same node to colocate due to pod affinity which says pods should deploy where already pods with label app=store are running
+# so those pods in running state
+# selector label app=store. The deployment has PodAffinity configured to ensure the scheduler does co-locate 
+# replicas on a single node.
