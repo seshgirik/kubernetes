@@ -1,0 +1,3352 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:55:09Z"
+    generateName: coffee-6f758cc7cc-
+    labels:
+      app: coffee
+      pod-template-hash: 6f758cc7cc
+    name: coffee-6f758cc7cc-v9gfq
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: coffee-6f758cc7cc
+      uid: fc984e3d-db39-412a-ad8a-7591a16b040d
+    resourceVersion: "300719"
+    selfLink: /api/v1/namespaces/default/pods/coffee-6f758cc7cc-v9gfq
+    uid: 9082cf4a-d7dc-4487-9c77-5a77cd806df0
+  spec:
+    containers:
+    - image: nginxdemos/hello:plain-text
+      imagePullPolicy: IfNotPresent
+      name: coffee
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:10Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:11Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:57Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:09Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://fb8849914ac2d541696c96a7ea72318ef4f6d2afa2997cac6cd405ed3ddf161e
+      image: docker.io/nginxdemos/hello:plain-text
+      imageID: sha256:e6797a8b6cd5951d06936cb3ae64e3a5af9500e24d75830b92bb13d616329bc4
+      lastState:
+        terminated:
+          containerID: containerd://aa2102b03e1dfe831156bc9d297237cbc7ca666934e6a289414a794838cc5a2e
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:46Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:53Z"
+      name: coffee
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:51Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.34
+    podIPs:
+    - ip: 10.1.1.34
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:55:10Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:55:09Z"
+    generateName: coffee-6f758cc7cc-
+    labels:
+      app: coffee
+      pod-template-hash: 6f758cc7cc
+    name: coffee-6f758cc7cc-x2s8x
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: coffee-6f758cc7cc
+      uid: fc984e3d-db39-412a-ad8a-7591a16b040d
+    resourceVersion: "300721"
+    selfLink: /api/v1/namespaces/default/pods/coffee-6f758cc7cc-x2s8x
+    uid: c81939c7-0d58-4eef-b0a8-34c190b9d844
+  spec:
+    containers:
+    - image: nginxdemos/hello:plain-text
+      imagePullPolicy: IfNotPresent
+      name: coffee
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:10Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:11Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:57Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:09Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://2f7a4943d4d26ea2112f05a462734feb0f84ae13f7038cada52c2b9a1c1b32f5
+      image: docker.io/nginxdemos/hello:plain-text
+      imageID: sha256:e6797a8b6cd5951d06936cb3ae64e3a5af9500e24d75830b92bb13d616329bc4
+      lastState:
+        terminated:
+          containerID: containerd://272aa102b994efbeeb2284129e125a82ef07e7eb5d7c0778b4ebd4c6185e83f4
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:43Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:53Z"
+      name: coffee
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:51Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.35
+    podIPs:
+    - ip: 10.1.1.35
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:55:10Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:05:22Z"
+    generateName: microbot-7dd47b8fd6-
+    labels:
+      app: microbot
+      pod-template-hash: 7dd47b8fd6
+    name: microbot-7dd47b8fd6-86wzp
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: microbot-7dd47b8fd6
+      uid: 8bb8d8c4-ec09-477b-b4e1-be599c849591
+    resourceVersion: "300726"
+    selfLink: /api/v1/namespaces/default/pods/microbot-7dd47b8fd6-86wzp
+    uid: d817a245-5004-4356-a55a-c63ec1db6cbe
+  spec:
+    containers:
+    - image: dontrebootme/microbot:v1
+      imagePullPolicy: IfNotPresent
+      name: microbot
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:30Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:11Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:43:33Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:25Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://4c7089b0633148efa3cb67a3074149a443795977e822e683b4e9155690b0601a
+      image: docker.io/dontrebootme/microbot:v1
+      imageID: sha256:899ceb044bf694340a22d71a28f4fff64c8197cee2ed7badde83e0032118970a
+      lastState:
+        terminated:
+          containerID: containerd://15098daf85059c21e6dc17d514a832fb0a197a44a5a221c09a0f62a3fe434f9c
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:43Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:53Z"
+      name: microbot
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:43:15Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.23
+    podIPs:
+    - ip: 10.1.1.23
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:05:30Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:05:03Z"
+    generateName: microbot-7dd47b8fd6-
+    labels:
+      app: microbot
+      pod-template-hash: 7dd47b8fd6
+    name: microbot-7dd47b8fd6-jg92z
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: microbot-7dd47b8fd6
+      uid: 8bb8d8c4-ec09-477b-b4e1-be599c849591
+    resourceVersion: "300731"
+    selfLink: /api/v1/namespaces/default/pods/microbot-7dd47b8fd6-jg92z
+    uid: a68532a1-b3b4-481a-b236-f32c8ec01aad
+  spec:
+    containers:
+    - image: dontrebootme/microbot:v1
+      imagePullPolicy: IfNotPresent
+      name: microbot
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:07Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:11Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:05Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:03Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://80fd6aca3a4cafbd7ce782aac5ee8b8ce2285eb0d2beb4f6b4dc36b0d9b42b57
+      image: docker.io/dontrebootme/microbot:v1
+      imageID: sha256:899ceb044bf694340a22d71a28f4fff64c8197cee2ed7badde83e0032118970a
+      lastState:
+        terminated:
+          containerID: containerd://b315b77c9db71091855600349ed94137d9ddd5b29abcbf05713d96a3bd56698f
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:46Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:46:55Z"
+      name: microbot
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:02Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.25
+    podIPs:
+    - ip: 10.1.1.25
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:05:07Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:05:07Z"
+    generateName: microbot-7dd47b8fd6-
+    labels:
+      app: microbot
+      pod-template-hash: 7dd47b8fd6
+    name: microbot-7dd47b8fd6-l7t4j
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: microbot-7dd47b8fd6
+      uid: 8bb8d8c4-ec09-477b-b4e1-be599c849591
+    resourceVersion: "300734"
+    selfLink: /api/v1/namespaces/default/pods/microbot-7dd47b8fd6-l7t4j
+    uid: c2c4c18d-b84d-428c-95eb-3001c573f18e
+  spec:
+    containers:
+    - image: dontrebootme/microbot:v1
+      imagePullPolicy: IfNotPresent
+      name: microbot
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:09Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:11Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:56Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:08Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://77bc32b187d141917a80cb2ee953b192fc609ac559adfc246c11db618febcb6e
+      image: docker.io/dontrebootme/microbot:v1
+      imageID: sha256:899ceb044bf694340a22d71a28f4fff64c8197cee2ed7badde83e0032118970a
+      lastState:
+        terminated:
+          containerID: containerd://62945784467d59a47e6336be438622faf4d7f8b9ee1e56ff251d8a65954d84ed
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:43Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:53Z"
+      name: microbot
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:51Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.36
+    podIPs:
+    - ip: 10.1.1.36
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:05:09Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:05:20Z"
+    generateName: microbot-7dd47b8fd6-
+    labels:
+      app: microbot
+      pod-template-hash: 7dd47b8fd6
+    name: microbot-7dd47b8fd6-r4cqg
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: microbot-7dd47b8fd6
+      uid: 8bb8d8c4-ec09-477b-b4e1-be599c849591
+    resourceVersion: "300737"
+    selfLink: /api/v1/namespaces/default/pods/microbot-7dd47b8fd6-r4cqg
+    uid: 6a6c0326-9593-4e1c-9bad-da4d9604db0f
+  spec:
+    containers:
+    - image: dontrebootme/microbot:v1
+      imagePullPolicy: IfNotPresent
+      name: microbot
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:27Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:11Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:57Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:22Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://d038ce860f179f96b581db173e23c8c24ec4f4afb09d619488984ae0825ec895
+      image: docker.io/dontrebootme/microbot:v1
+      imageID: sha256:899ceb044bf694340a22d71a28f4fff64c8197cee2ed7badde83e0032118970a
+      lastState:
+        terminated:
+          containerID: containerd://c4aa93cb13ac0922e465ab08cecbcc692b64aaaf1968efd529f652821e486ea1
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:47Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:46:55Z"
+      name: microbot
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:51Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.37
+    podIPs:
+    - ip: 10.1.1.37
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:05:27Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:05:22Z"
+    generateName: microbot-7dd47b8fd6-
+    labels:
+      app: microbot
+      pod-template-hash: 7dd47b8fd6
+    name: microbot-7dd47b8fd6-wkw2b
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: microbot-7dd47b8fd6
+      uid: 8bb8d8c4-ec09-477b-b4e1-be599c849591
+    resourceVersion: "300741"
+    selfLink: /api/v1/namespaces/default/pods/microbot-7dd47b8fd6-wkw2b
+    uid: aa23740a-3e8c-42fd-8866-8bcc8b306fac
+  spec:
+    containers:
+    - image: dontrebootme/microbot:v1
+      imagePullPolicy: IfNotPresent
+      name: microbot
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:31Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:56Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:05:25Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://3614c1cd2f5edc3b465e8edd8e81a416cc62202f9ef08158fdcbd84097dc3818
+      image: docker.io/dontrebootme/microbot:v1
+      imageID: sha256:899ceb044bf694340a22d71a28f4fff64c8197cee2ed7badde83e0032118970a
+      lastState:
+        terminated:
+          containerID: containerd://31114e9369d671d37533bd81545aeaae169a40f9401e039a88974a8a5068fa52
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:43Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:53Z"
+      name: microbot
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:51Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.41
+    podIPs:
+    - ip: 10.1.1.41
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:05:31Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T16:57:15Z"
+    generateName: my-nginx-555485ff9b-
+    labels:
+      pod-template-hash: 555485ff9b
+      run: my-nginx
+    name: my-nginx-555485ff9b-9n67b
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: my-nginx-555485ff9b
+      uid: 55eba25d-ae17-4582-b114-b203e5ac0d86
+    resourceVersion: "300744"
+    selfLink: /api/v1/namespaces/default/pods/my-nginx-555485ff9b-9n67b
+    uid: 57c58f26-5782-40bb-a833-ccef83731420
+  spec:
+    containers:
+    - image: nginx
+      imagePullPolicy: Always
+      name: my-nginx
+      ports:
+      - containerPort: 8000
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T16:57:16Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:46:12Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T16:57:15Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://4fd0e34c6c0960b816b52ec5f866139a3628341a69a104141b95f3638fc00fc4
+      image: docker.io/library/nginx:latest
+      imageID: docker.io/library/nginx@sha256:aeded0f2a861747f43a01cf1018cf9efe2bdd02afd57d2b11fcc7fcadc16ccd1
+      lastState:
+        terminated:
+          containerID: containerd://72e7df632c196f60d573b6206b98fd1afd93ef0daa1cb59af6b2bd1b474cb3ee
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:44Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:48:54Z"
+      name: my-nginx
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:46:12Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.30
+    podIPs:
+    - ip: 10.1.1.30
+    qosClass: BestEffort
+    startTime: "2019-10-05T16:57:16Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T16:57:15Z"
+    generateName: my-nginx-555485ff9b-
+    labels:
+      pod-template-hash: 555485ff9b
+      run: my-nginx
+    name: my-nginx-555485ff9b-hsczk
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: my-nginx-555485ff9b
+      uid: 55eba25d-ae17-4582-b114-b203e5ac0d86
+    resourceVersion: "300747"
+    selfLink: /api/v1/namespaces/default/pods/my-nginx-555485ff9b-hsczk
+    uid: 4eebc642-7f38-4630-9e65-e62f1d3c10b4
+  spec:
+    containers:
+    - image: nginx
+      imagePullPolicy: Always
+      name: my-nginx
+      ports:
+      - containerPort: 8000
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T16:57:15Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:45:31Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T16:57:15Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://9ff6ce0fe8fdd088319de4d11bc8707df2409b87431f76b9bd98a45ef2d7f126
+      image: docker.io/library/nginx:latest
+      imageID: docker.io/library/nginx@sha256:aeded0f2a861747f43a01cf1018cf9efe2bdd02afd57d2b11fcc7fcadc16ccd1
+      lastState:
+        terminated:
+          containerID: containerd://a6dfad4a1465c6e4ba79a7e71b61f2c7cae7866c2da4d48f3e6023e096cbc773
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:46Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:49:05Z"
+      name: my-nginx
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:45:21Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.21
+    podIPs:
+    - ip: 10.1.1.21
+    qosClass: BestEffort
+    startTime: "2019-10-05T16:57:15Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T16:57:15Z"
+    generateName: my-nginx-555485ff9b-
+    labels:
+      pod-template-hash: 555485ff9b
+      run: my-nginx
+    name: my-nginx-555485ff9b-vx46k
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: my-nginx-555485ff9b
+      uid: 55eba25d-ae17-4582-b114-b203e5ac0d86
+    resourceVersion: "300753"
+    selfLink: /api/v1/namespaces/default/pods/my-nginx-555485ff9b-vx46k
+    uid: 06e4af8c-3350-49a0-a56f-2ea11a683072
+  spec:
+    containers:
+    - image: nginx
+      imagePullPolicy: Always
+      name: my-nginx
+      ports:
+      - containerPort: 8000
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T16:57:16Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:45:53Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T16:57:15Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://2d42e08083f31729baa7ad5548fa828b1d6dfda9883f945dbcc080815cbee11d
+      image: docker.io/library/nginx:latest
+      imageID: docker.io/library/nginx@sha256:aeded0f2a861747f43a01cf1018cf9efe2bdd02afd57d2b11fcc7fcadc16ccd1
+      lastState:
+        terminated:
+          containerID: containerd://1cd99f30941e79b50ef3067622a976c43646cac09e2076bab591503ae250047c
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:43Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:48:30Z"
+      name: my-nginx
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:45:51Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.42
+    podIPs:
+    - ip: 10.1.1.42
+    qosClass: BestEffort
+    startTime: "2019-10-05T16:57:16Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:55:11Z"
+    generateName: tea-b88549687-
+    labels:
+      app: tea
+      pod-template-hash: b88549687
+    name: tea-b88549687-64dxw
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: tea-b88549687
+      uid: 86d4ce2f-61b4-4dcc-a24a-3b8c4a19701b
+    resourceVersion: "300755"
+    selfLink: /api/v1/namespaces/default/pods/tea-b88549687-64dxw
+    uid: 9a2a8fd1-941e-4e28-b6ac-3279109f1638
+  spec:
+    containers:
+    - image: nginxdemos/hello:plain-text
+      imagePullPolicy: IfNotPresent
+      name: tea
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:13Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:56Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:11Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://fb7b81421d70bffba81e6f7a83ec1ff1b6b45e7e6acd4054242c12d57f9fd932
+      image: docker.io/nginxdemos/hello:plain-text
+      imageID: sha256:e6797a8b6cd5951d06936cb3ae64e3a5af9500e24d75830b92bb13d616329bc4
+      lastState:
+        terminated:
+          containerID: containerd://7cabbbe6aa57bf197428ae57a2a0c152280540e7e3cf107bd1fe57e7b8489014
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:44Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:53Z"
+      name: tea
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:49Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.31
+    podIPs:
+    - ip: 10.1.1.31
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:55:13Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:55:10Z"
+    generateName: tea-b88549687-
+    labels:
+      app: tea
+      pod-template-hash: b88549687
+    name: tea-b88549687-dn77s
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: tea-b88549687
+      uid: 86d4ce2f-61b4-4dcc-a24a-3b8c4a19701b
+    resourceVersion: "300759"
+    selfLink: /api/v1/namespaces/default/pods/tea-b88549687-dn77s
+    uid: 046b00db-fdcd-4bfc-8206-ac5ff8963ada
+  spec:
+    containers:
+    - image: nginxdemos/hello:plain-text
+      imagePullPolicy: IfNotPresent
+      name: tea
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:13Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:43:32Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:11Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://cb1b71d5da1395a54b16484a807cdf7d27d3a17341b8920551d40ed2db3bc01a
+      image: docker.io/nginxdemos/hello:plain-text
+      imageID: sha256:e6797a8b6cd5951d06936cb3ae64e3a5af9500e24d75830b92bb13d616329bc4
+      lastState:
+        terminated:
+          containerID: containerd://e7f9f75cdcf835b37763a918252bcd4e49e0494168afd6e92e310430ce50fd36
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:47Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:51Z"
+      name: tea
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:43:02Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.26
+    podIPs:
+    - ip: 10.1.1.26
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:55:13Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-10-05T18:55:11Z"
+    generateName: tea-b88549687-
+    labels:
+      app: tea
+      pod-template-hash: b88549687
+    name: tea-b88549687-sbnh9
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: tea-b88549687
+      uid: 86d4ce2f-61b4-4dcc-a24a-3b8c4a19701b
+    resourceVersion: "300763"
+    selfLink: /api/v1/namespaces/default/pods/tea-b88549687-sbnh9
+    uid: a16ea3dc-f649-4647-ac6e-f6f4cdf758cf
+  spec:
+    containers:
+    - image: nginxdemos/hello:plain-text
+      imagePullPolicy: IfNotPresent
+      name: tea
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:13Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:44:56Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-05T18:55:11Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://b470f5671c62cba8c146722117ff66b715b03036fd9772cc0d673005a6d1b658
+      image: docker.io/nginxdemos/hello:plain-text
+      imageID: sha256:e6797a8b6cd5951d06936cb3ae64e3a5af9500e24d75830b92bb13d616329bc4
+      lastState:
+        terminated:
+          containerID: containerd://4508bd2ae63f3165022fc6e0fb5d4ab7015e3faaf1b55bc3b1fa319b4ec25e6f
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:43Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:47:53Z"
+      name: tea
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:44:51Z"
+    hostIP: 10.0.2.15
+    phase: Running
+    podIP: 10.1.1.28
+    podIPs:
+    - ip: 10.1.1.28
+    qosClass: BestEffort
+    startTime: "2019-10-05T18:55:13Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-09-15T02:15:46Z"
+    generateName: wso2-elastic-search-55f7f87d6-
+    labels:
+      deployment: wso2-elastic-search
+      pod-template-hash: 55f7f87d6
+    name: wso2-elastic-search-55f7f87d6-578lk
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: wso2-elastic-search-55f7f87d6
+      uid: 10bb5830-d4d6-41eb-b3df-cd51e63eed07
+    resourceVersion: "300770"
+    selfLink: /api/v1/namespaces/default/pods/wso2-elastic-search-55f7f87d6-578lk
+    uid: 1a59195b-8b8f-42c9-808c-59e75295321d
+  spec:
+    containers:
+    - env:
+      - name: discovery.type
+        value: single-node
+      - name: ES_JAVA_OPTS
+        value: -Xms256m -Xmx256m
+      - name: network.host
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.podIP
+      - name: PROCESSORS
+        valueFrom:
+          resourceFieldRef:
+            divisor: "0"
+            resource: limits.cpu
+      image: docker.elastic.co/elasticsearch/elasticsearch:6.5.3
+      imagePullPolicy: Always
+      livenessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 90
+        periodSeconds: 5
+        successThreshold: 1
+        tcpSocket:
+          port: 9200
+        timeoutSeconds: 1
+      name: wso2-elastic-search
+      ports:
+      - containerPort: 9200
+        name: http
+        protocol: TCP
+      - containerPort: 9300
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /_cluster/health
+          port: http
+          scheme: HTTP
+        initialDelaySeconds: 90
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        limits:
+          cpu: "1"
+        requests:
+          cpu: 250m
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    initContainers:
+    - command:
+      - sysctl
+      - -w
+      - vm.max_map_count=262144
+      image: busybox:1.27.2
+      imagePullPolicy: IfNotPresent
+      name: init-sysctl
+      resources: {}
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:45:29Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-13T12:21:14Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-09-15T02:15:46Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://0f86520c06d6a24ebab1cdc6d0d224cd16ae560d37e0df14859e9f4cf76753b3
+      image: docker.elastic.co/elasticsearch/elasticsearch:6.5.3
+      imageID: docker.elastic.co/elasticsearch/elasticsearch@sha256:e86539ef052ea90a725b58c4ac079530fb4b9ddc5f283dda6a4837c08ab60459
+      lastState:
+        terminated:
+          containerID: containerd://6bc29805f6e4556e2f9c84d2b083a4f8f2d6a958378ad7d70c6f257842a4807d
+          exitCode: 143
+          finishedAt: "2019-10-12T01:56:50Z"
+          reason: Error
+          startedAt: "2019-10-12T01:55:08Z"
+      name: wso2-elastic-search
+      ready: true
+      restartCount: 16
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:59:45Z"
+    hostIP: 10.0.2.15
+    initContainerStatuses:
+    - containerID: containerd://9a128a1d2ed33ef5107b61784be0ce568ce6e93ef74f71aa1e0987a8e450e0d1
+      image: docker.io/library/busybox:1.27.2
+      imageID: docker.io/library/busybox@sha256:bbc3a03235220b170ba48a157dd097dd1379299370e1ed99ce976df0355d24f0
+      lastState: {}
+      name: init-sysctl
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://9a128a1d2ed33ef5107b61784be0ce568ce6e93ef74f71aa1e0987a8e450e0d1
+          exitCode: 0
+          finishedAt: "2019-10-12T01:44:55Z"
+          reason: Completed
+          startedAt: "2019-10-12T01:44:54Z"
+    phase: Running
+    podIP: 10.1.1.43
+    podIPs:
+    - ip: 10.1.1.43
+    qosClass: Burstable
+    startTime: "2019-09-15T02:15:46Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-09-15T02:15:48Z"
+    generateName: wso2-kibana-6f9bf7c895-
+    labels:
+      deployment: wso2-kibana
+      pod-template-hash: 6f9bf7c895
+    name: wso2-kibana-6f9bf7c895-8jqb2
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: wso2-kibana-6f9bf7c895
+      uid: 4a98c5c2-26dc-4971-8340-ca6bd2563b42
+    resourceVersion: "300773"
+    selfLink: /api/v1/namespaces/default/pods/wso2-kibana-6f9bf7c895-8jqb2
+    uid: 4ee6ed66-aa01-4a37-ae2f-4c441627053f
+  spec:
+    containers:
+    - env:
+      - name: NODE_IP
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.podIP
+      image: docker.elastic.co/kibana/kibana:6.5.3
+      imagePullPolicy: Always
+      livenessProbe:
+        failureThreshold: 3
+        initialDelaySeconds: 90
+        periodSeconds: 5
+        successThreshold: 1
+        tcpSocket:
+          port: 5601
+        timeoutSeconds: 1
+      name: wso2-kibana
+      ports:
+      - containerPort: 5601
+        name: http
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /api/status
+          port: http
+          scheme: HTTP
+        initialDelaySeconds: 90
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /usr/share/kibana/config/kibana.yml
+        name: kibana-yml
+        subPath: kibana.yml
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    initContainers:
+    - command:
+      - sh
+      - -c
+      - until nslookup wso2-elasticsearch-service; do echo waiting for wso2-elasticsearch-service;
+        sleep 2; done;
+      image: busybox
+      imagePullPolicy: Always
+      name: init-wso2-elasticsearch-service
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - configMap:
+        defaultMode: 420
+        name: kibana-yml
+      name: kibana-yml
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T01:46:30Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-19T12:15:12Z"
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-14T00:42:02Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-09-15T02:15:48Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://e766c74fcc85c3e6ee5023498afc318dacb689e64bcf88dd0148da1a5a3b27f5
+      image: docker.elastic.co/kibana/kibana:6.5.3
+      imageID: docker.elastic.co/kibana/kibana@sha256:8ff31afcb3d50fed0870ddc0b17365f15eeb27f51b66d98ba5e076a020646482
+      lastState:
+        terminated:
+          containerID: containerd://c33a442596492600fb5a5350b5dd9ae1b425b9ebfe7669c4e721e3421892cbd6
+          exitCode: 137
+          finishedAt: "2019-10-12T01:55:45Z"
+          reason: Error
+          startedAt: "2019-10-12T01:47:25Z"
+      name: wso2-kibana
+      ready: true
+      restartCount: 11
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T01:56:18Z"
+    hostIP: 10.0.2.15
+    initContainerStatuses:
+    - containerID: containerd://55e340c3780c37e58871acffcf839a4bb3dd018b1f65ae45fcf72d7c95be99cc
+      image: docker.io/library/busybox:latest
+      imageID: docker.io/library/busybox@sha256:fe301db49df08c384001ed752dff6d52b4305a73a7f608f21528048e8a08b51e
+      lastState: {}
+      name: init-wso2-elasticsearch-service
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://55e340c3780c37e58871acffcf839a4bb3dd018b1f65ae45fcf72d7c95be99cc
+          exitCode: 0
+          finishedAt: "2019-10-12T01:46:27Z"
+          reason: Completed
+          startedAt: "2019-10-12T01:46:22Z"
+    phase: Running
+    podIP: 10.1.1.24
+    podIPs:
+    - ip: 10.1.1.24
+    qosClass: BestEffort
+    startTime: "2019-09-15T02:15:48Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2019-09-15T02:15:59Z"
+    generateName: wso2apim-7667b55dc7-
+    labels:
+      deployment: wso2apim
+      pod-template-hash: 7667b55dc7
+    name: wso2apim-7667b55dc7-78gmj
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: wso2apim-7667b55dc7
+      uid: 365b2a20-8e3d-4a13-ac38-eaaaa7f1be90
+    resourceVersion: "300341"
+    selfLink: /api/v1/namespaces/default/pods/wso2apim-7667b55dc7-78gmj
+    uid: 8de70a50-7d67-4206-89ad-2da55189138a
+  spec:
+    containers:
+    - image: wso2/wso2am:2.6.0
+      imagePullPolicy: Always
+      livenessProbe:
+        exec:
+          command:
+          - /bin/bash
+          - -c
+          - nc -z localhost 9443
+        failureThreshold: 3
+        initialDelaySeconds: 150
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: wso2apim
+      ports:
+      - containerPort: 8280
+        protocol: TCP
+      - containerPort: 8243
+        protocol: TCP
+      - containerPort: 9763
+        protocol: TCP
+      - containerPort: 9443
+        protocol: TCP
+      - containerPort: 5672
+        protocol: TCP
+      - containerPort: 9711
+        protocol: TCP
+      - containerPort: 9611
+        protocol: TCP
+      - containerPort: 7711
+        protocol: TCP
+      - containerPort: 7611
+        protocol: TCP
+      readinessProbe:
+        exec:
+          command:
+          - /bin/bash
+          - -c
+          - nc -z localhost 9443
+        failureThreshold: 3
+        initialDelaySeconds: 150
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /home/wso2carbon/wso2am-2.6.0/repository/logs/
+        name: shared-logs
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    - env:
+      - name: NODE_ID
+        value: wso2-apim
+      - name: NODE_IP
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: status.podIP
+      image: maanadev/logstash:6.5.3-custom
+      imagePullPolicy: IfNotPresent
+      name: logstash
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /usr/share/logstash/mylogs/
+        name: shared-logs
+      - mountPath: /usr/share/logstash/config/logstash.yml
+        name: logstash-yml
+        subPath: logstash.yml
+      - mountPath: /usr/share/logstash/pipeline/logstash.conf
+        name: logstash-conf
+        subPath: logstash.conf
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    initContainers:
+    - command:
+      - sh
+      - -c
+      - until nc -z wso2-elasticsearch-service 9200; do echo waiting for wso2-elasticsearch-service;
+        sleep 2; done;
+      image: busybox
+      imagePullPolicy: Always
+      name: init-wso2-elasticsearch-service
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-zl4x6
+        readOnly: true
+    nodeName: sesh
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - emptyDir: {}
+      name: shared-logs
+    - configMap:
+        defaultMode: 420
+        name: logstash-yml
+      name: logstash-yml
+    - configMap:
+        defaultMode: 420
+        name: logstash-conf
+      name: logstash-conf
+    - name: default-token-zl4x6
+      secret:
+        defaultMode: 420
+        secretName: default-token-zl4x6
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2019-10-12T02:01:23Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2019-09-15T02:16:02Z"
+      message: 'containers with unready status: [wso2apim]'
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2019-09-15T02:16:02Z"
+      message: 'containers with unready status: [wso2apim]'
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2019-09-15T02:15:59Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://24b7028c7337f1345b1234e3727cee23fdfe41596bd91c1f851a6b10e8a1b18a
+      image: docker.io/maanadev/logstash:6.5.3-custom
+      imageID: docker.io/maanadev/logstash@sha256:bb92015e2973b79258f9cb622037a4a042becc89c34433c2db971f65980d42c2
+      lastState:
+        terminated:
+          containerID: containerd://92946fe3cdbc253feefbd3d637d37d82f45c278fcb42f39176489be7d8f9b48d
+          exitCode: 255
+          finishedAt: "2019-10-06T16:36:44Z"
+          reason: Unknown
+          startedAt: "2019-10-06T05:58:03Z"
+      name: logstash
+      ready: true
+      restartCount: 4
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-12T02:01:43Z"
+    - containerID: containerd://64ca31cce169f26ef75baba1eea15ad3b6134adf5b4bb300d6a1d7935a95f4e3
+      image: docker.io/wso2/wso2am:2.6.0
+      imageID: docker.io/wso2/wso2am@sha256:80e7c77ebe9a4caed83514db52e49d1e3f8b316a20d4df5411f772018dcce0c4
+      lastState:
+        terminated:
+          containerID: containerd://310c0e0c8f58c17d35810c941fc9a4f89e6df7ca5720ee6eb85fd080560eda00
+          exitCode: 137
+          finishedAt: "2019-10-13T17:48:21Z"
+          reason: Error
+          startedAt: "2019-10-13T17:44:53Z"
+      name: wso2apim
+      ready: false
+      restartCount: 328
+      started: true
+      state:
+        running:
+          startedAt: "2019-10-13T17:53:37Z"
+    hostIP: 10.0.2.15
+    initContainerStatuses:
+    - containerID: containerd://3cd8a69f3fd4b8f328d16badf75c8cdd2e340b778381ca7b288e773a318142be
+      image: docker.io/library/busybox:latest
+      imageID: docker.io/library/busybox@sha256:fe301db49df08c384001ed752dff6d52b4305a73a7f608f21528048e8a08b51e
+      lastState: {}
+      name: init-wso2-elasticsearch-service
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://3cd8a69f3fd4b8f328d16badf75c8cdd2e340b778381ca7b288e773a318142be
+          exitCode: 0
+          finishedAt: "2019-10-12T02:01:22Z"
+          reason: Completed
+          startedAt: "2019-10-12T01:45:40Z"
+    phase: Running
+    podIP: 10.1.1.39
+    podIPs:
+    - ip: 10.1.1.39
+    qosClass: BestEffort
+    startTime: "2019-09-15T02:16:02Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"coffee-svc","namespace":"default"},"spec":{"ports":[{"name":"http","port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"coffee"}}}
+    creationTimestamp: "2019-10-05T18:55:09Z"
+    name: coffee-svc
+    namespace: default
+    resourceVersion: "193829"
+    selfLink: /api/v1/namespaces/default/services/coffee-svc
+    uid: cd9bc866-f594-455a-9cc4-06ec71fd8b5f
+  spec:
+    clusterIP: 10.152.183.146
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: coffee
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-09-15T01:16:24Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "149388"
+    selfLink: /api/v1/namespaces/default/services/kubernetes
+    uid: b70da595-2062-4721-8245-bdc9def9bffe
+  spec:
+    clusterIP: 10.152.183.1
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 16443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-10-05T18:05:37Z"
+    labels:
+      app: microbot
+    name: microbot-service
+    namespace: default
+    resourceVersion: "190242"
+    selfLink: /api/v1/namespaces/default/services/microbot-service
+    uid: 1baab21a-c3ec-4a01-bc69-1227ffb45deb
+  spec:
+    clusterIP: 10.152.183.185
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 32421
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: microbot
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"run":"my-nginx"},"name":"my-nginx","namespace":"default"},"spec":{"ports":[{"port":9000,"protocol":"TCP","targetPort":8000}],"selector":{"run":"my-nginx"},"type":"LoadBalancer"}}
+    creationTimestamp: "2019-10-05T17:00:39Z"
+    labels:
+      run: my-nginx
+    name: my-nginx
+    namespace: default
+    resourceVersion: "185355"
+    selfLink: /api/v1/namespaces/default/services/my-nginx
+    uid: a5e7cba8-215c-4c03-aa98-a9fdea373a66
+  spec:
+    clusterIP: 10.152.183.207
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 31793
+      port: 9000
+      protocol: TCP
+      targetPort: 8000
+    selector:
+      run: my-nginx
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":null,"name":"tea-svc","namespace":"default"},"spec":{"ports":[{"name":"http","port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"tea"}}}
+    creationTimestamp: "2019-10-05T18:55:11Z"
+    name: tea-svc
+    namespace: default
+    resourceVersion: "193853"
+    selfLink: /api/v1/namespaces/default/services/tea-svc
+    uid: c9da7dbb-3481-4acb-855f-267c485cd6fe
+  spec:
+    clusterIP: 10.152.183.131
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: tea
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-09-15T02:15:46Z"
+    name: wso2-elasticsearch-service
+    namespace: default
+    resourceVersion: "151803"
+    selfLink: /api/v1/namespaces/default/services/wso2-elasticsearch-service
+    uid: d977f2b7-ea72-4edf-8e62-ec8878285ded
+  spec:
+    clusterIP: 10.152.183.26
+    ports:
+    - name: http-1
+      port: 9200
+      protocol: TCP
+      targetPort: 9200
+    - name: http-2
+      port: 9300
+      protocol: TCP
+      targetPort: 9300
+    selector:
+      deployment: wso2-elastic-search
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-09-15T02:15:47Z"
+    name: wso2-kibana-service
+    namespace: default
+    resourceVersion: "151813"
+    selfLink: /api/v1/namespaces/default/services/wso2-kibana-service
+    uid: f4cc7ca4-1699-4c00-b08f-f33277d1cbb5
+  spec:
+    clusterIP: 10.152.183.80
+    ports:
+    - name: http
+      port: 5601
+      protocol: TCP
+      targetPort: 5601
+    selector:
+      deployment: wso2-kibana
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2019-09-15T02:16:02Z"
+    name: wso2apim-service
+    namespace: default
+    resourceVersion: "151850"
+    selfLink: /api/v1/namespaces/default/services/wso2apim-service
+    uid: 2839af33-bee1-41f6-9d6d-3b81d59e14a2
+  spec:
+    clusterIP: 10.152.183.106
+    ports:
+    - name: pass-through-http
+      port: 8280
+      protocol: TCP
+      targetPort: 8280
+    - name: pass-through-https
+      port: 8243
+      protocol: TCP
+      targetPort: 8243
+    - name: servlet-http
+      port: 9763
+      protocol: TCP
+      targetPort: 9763
+    - name: servlet-https
+      port: 9443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      deployment: wso2apim
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"coffee","namespace":"default"},"spec":{"replicas":2,"selector":{"matchLabels":{"app":"coffee"}},"template":{"metadata":{"labels":{"app":"coffee"}},"spec":{"containers":[{"image":"nginxdemos/hello:plain-text","name":"coffee","ports":[{"containerPort":80}]}]}}}}
+    creationTimestamp: "2019-10-05T18:55:09Z"
+    generation: 1
+    name: coffee
+    namespace: default
+    resourceVersion: "300732"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/coffee
+    uid: e37634aa-c89d-4c80-ba46-5a92852e02f4
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 2
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: coffee
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: coffee
+      spec:
+        containers:
+        - image: nginxdemos/hello:plain-text
+          imagePullPolicy: IfNotPresent
+          name: coffee
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    conditions:
+    - lastTransitionTime: "2019-10-06T05:48:13Z"
+      lastUpdateTime: "2019-10-06T05:48:18Z"
+      message: ReplicaSet "coffee-6f758cc7cc" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2019-10-19T12:15:11Z"
+      lastUpdateTime: "2019-10-19T12:15:11Z"
+      message: Deployment does not have minimum availability.
+      reason: MinimumReplicasUnavailable
+      status: "False"
+      type: Available
+    observedGeneration: 1
+    replicas: 2
+    unavailableReplicas: 2
+    updatedReplicas: 2
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-05T18:05:00Z"
+    generation: 3
+    labels:
+      app: microbot
+    name: microbot
+    namespace: default
+    resourceVersion: "300750"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/microbot
+    uid: 01aeb342-6153-4507-95a5-dc1d4ea6bae8
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 5
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: microbot
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: microbot
+      spec:
+        containers:
+        - image: dontrebootme/microbot:v1
+          imagePullPolicy: IfNotPresent
+          name: microbot
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    conditions:
+    - lastTransitionTime: "2019-10-05T18:05:03Z"
+      lastUpdateTime: "2019-10-05T18:06:22Z"
+      message: ReplicaSet "microbot-7dd47b8fd6" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2019-10-19T12:15:11Z"
+      lastUpdateTime: "2019-10-19T12:15:11Z"
+      message: Deployment does not have minimum availability.
+      reason: MinimumReplicasUnavailable
+      status: "False"
+      type: Available
+    observedGeneration: 3
+    replicas: 5
+    unavailableReplicas: 5
+    updatedReplicas: 5
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"my-nginx","namespace":"default"},"spec":{"replicas":3,"selector":{"matchLabels":{"run":"my-nginx"}},"template":{"metadata":{"labels":{"run":"my-nginx"}},"spec":{"containers":[{"image":"nginx","name":"my-nginx","ports":[{"containerPort":8000}]}]}}}}
+    creationTimestamp: "2019-10-05T16:57:15Z"
+    generation: 1
+    name: my-nginx
+    namespace: default
+    resourceVersion: "300762"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/my-nginx
+    uid: 8f8c8602-1b18-4236-94fc-130c565b2671
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        run: my-nginx
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          run: my-nginx
+      spec:
+        containers:
+        - image: nginx
+          imagePullPolicy: Always
+          name: my-nginx
+          ports:
+          - containerPort: 8000
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    conditions:
+    - lastTransitionTime: "2019-10-05T16:57:15Z"
+      lastUpdateTime: "2019-10-05T16:59:03Z"
+      message: ReplicaSet "my-nginx-555485ff9b" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2019-10-19T12:15:12Z"
+      lastUpdateTime: "2019-10-19T12:15:12Z"
+      message: Deployment does not have minimum availability.
+      reason: MinimumReplicasUnavailable
+      status: "False"
+      type: Available
+    observedGeneration: 1
+    replicas: 3
+    unavailableReplicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"tea","namespace":"default"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"tea"}},"template":{"metadata":{"labels":{"app":"tea"}},"spec":{"containers":[{"image":"nginxdemos/hello:plain-text","name":"tea","ports":[{"containerPort":80}]}]}}}}
+    creationTimestamp: "2019-10-05T18:55:10Z"
+    generation: 1
+    name: tea
+    namespace: default
+    resourceVersion: "300772"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/tea
+    uid: 0e88a843-520a-43f7-ad67-dfafdf2d18fc
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: tea
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: tea
+      spec:
+        containers:
+        - image: nginxdemos/hello:plain-text
+          imagePullPolicy: IfNotPresent
+          name: tea
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    conditions:
+    - lastTransitionTime: "2019-10-06T05:48:04Z"
+      lastUpdateTime: "2019-10-06T05:48:26Z"
+      message: ReplicaSet "tea-b88549687" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2019-10-19T12:15:12Z"
+      lastUpdateTime: "2019-10-19T12:15:12Z"
+      message: Deployment does not have minimum availability.
+      reason: MinimumReplicasUnavailable
+      status: "False"
+      type: Available
+    observedGeneration: 1
+    replicas: 3
+    unavailableReplicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-09-15T02:15:46Z"
+    generation: 1
+    labels:
+      deployment: wso2-elastic-search
+    name: wso2-elastic-search
+    namespace: default
+    resourceVersion: "300776"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/wso2-elastic-search
+    uid: b98a6490-d078-4bfd-9ad9-76aa40a91625
+  spec:
+    minReadySeconds: 30
+    progressDeadlineSeconds: 2147483647
+    replicas: 1
+    revisionHistoryLimit: 2147483647
+    selector:
+      matchLabels:
+        deployment: wso2-elastic-search
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          deployment: wso2-elastic-search
+      spec:
+        containers:
+        - env:
+          - name: discovery.type
+            value: single-node
+          - name: ES_JAVA_OPTS
+            value: -Xms256m -Xmx256m
+          - name: network.host
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: PROCESSORS
+            valueFrom:
+              resourceFieldRef:
+                divisor: "0"
+                resource: limits.cpu
+          image: docker.elastic.co/elasticsearch/elasticsearch:6.5.3
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            tcpSocket:
+              port: 9200
+            timeoutSeconds: 1
+          name: wso2-elastic-search
+          ports:
+          - containerPort: 9200
+            name: http
+            protocol: TCP
+          - containerPort: 9300
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /_cluster/health
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: "1"
+            requests:
+              cpu: 250m
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - sysctl
+          - -w
+          - vm.max_map_count=262144
+          image: busybox:1.27.2
+          imagePullPolicy: IfNotPresent
+          name: init-sysctl
+          resources: {}
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    conditions:
+    - lastTransitionTime: "2019-09-15T02:15:46Z"
+      lastUpdateTime: "2019-09-15T02:15:46Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 1
+    replicas: 1
+    unavailableReplicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-09-15T02:15:47Z"
+    generation: 1
+    labels:
+      deployment: wso2-kibana
+    name: wso2-kibana
+    namespace: default
+    resourceVersion: "300781"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/wso2-kibana
+    uid: acc2f7e7-1f15-4b88-9d76-a7e967f2e0d3
+  spec:
+    minReadySeconds: 30
+    progressDeadlineSeconds: 2147483647
+    replicas: 1
+    revisionHistoryLimit: 2147483647
+    selector:
+      matchLabels:
+        deployment: wso2-kibana
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          deployment: wso2-kibana
+      spec:
+        containers:
+        - env:
+          - name: NODE_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          image: docker.elastic.co/kibana/kibana:6.5.3
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            tcpSocket:
+              port: 5601
+            timeoutSeconds: 1
+          name: wso2-kibana
+          ports:
+          - containerPort: 5601
+            name: http
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /api/status
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /usr/share/kibana/config/kibana.yml
+            name: kibana-yml
+            subPath: kibana.yml
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - sh
+          - -c
+          - until nslookup wso2-elasticsearch-service; do echo waiting for wso2-elasticsearch-service;
+            sleep 2; done;
+          image: busybox
+          imagePullPolicy: Always
+          name: init-wso2-elasticsearch-service
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: kibana-yml
+          name: kibana-yml
+  status:
+    conditions:
+    - lastTransitionTime: "2019-09-15T02:15:48Z"
+      lastUpdateTime: "2019-09-15T02:15:48Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 1
+    replicas: 1
+    unavailableReplicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-09-15T02:15:51Z"
+    generation: 1
+    labels:
+      deployment: wso2apim
+    name: wso2apim
+    namespace: default
+    resourceVersion: "151912"
+    selfLink: /apis/apps/v1/namespaces/default/deployments/wso2apim
+    uid: 97d17fa4-bfa3-4e7b-b8f8-1d6c5ab0f203
+  spec:
+    minReadySeconds: 30
+    progressDeadlineSeconds: 2147483647
+    replicas: 1
+    revisionHistoryLimit: 2147483647
+    selector:
+      matchLabels:
+        deployment: wso2apim
+    strategy:
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 0
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          deployment: wso2apim
+      spec:
+        containers:
+        - image: wso2/wso2am:2.6.0
+          imagePullPolicy: Always
+          livenessProbe:
+            exec:
+              command:
+              - /bin/bash
+              - -c
+              - nc -z localhost 9443
+            failureThreshold: 3
+            initialDelaySeconds: 150
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: wso2apim
+          ports:
+          - containerPort: 8280
+            protocol: TCP
+          - containerPort: 8243
+            protocol: TCP
+          - containerPort: 9763
+            protocol: TCP
+          - containerPort: 9443
+            protocol: TCP
+          - containerPort: 5672
+            protocol: TCP
+          - containerPort: 9711
+            protocol: TCP
+          - containerPort: 9611
+            protocol: TCP
+          - containerPort: 7711
+            protocol: TCP
+          - containerPort: 7611
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - /bin/bash
+              - -c
+              - nc -z localhost 9443
+            failureThreshold: 3
+            initialDelaySeconds: 150
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /home/wso2carbon/wso2am-2.6.0/repository/logs/
+            name: shared-logs
+        - env:
+          - name: NODE_ID
+            value: wso2-apim
+          - name: NODE_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          image: maanadev/logstash:6.5.3-custom
+          imagePullPolicy: IfNotPresent
+          name: logstash
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /usr/share/logstash/mylogs/
+            name: shared-logs
+          - mountPath: /usr/share/logstash/config/logstash.yml
+            name: logstash-yml
+            subPath: logstash.yml
+          - mountPath: /usr/share/logstash/pipeline/logstash.conf
+            name: logstash-conf
+            subPath: logstash.conf
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - sh
+          - -c
+          - until nc -z wso2-elasticsearch-service 9200; do echo waiting for wso2-elasticsearch-service;
+            sleep 2; done;
+          image: busybox
+          imagePullPolicy: Always
+          name: init-wso2-elasticsearch-service
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: shared-logs
+        - configMap:
+            defaultMode: 420
+            name: logstash-yml
+          name: logstash-yml
+        - configMap:
+            defaultMode: 420
+            name: logstash-conf
+          name: logstash-conf
+  status:
+    conditions:
+    - lastTransitionTime: "2019-09-15T02:16:49Z"
+      lastUpdateTime: "2019-09-15T02:16:49Z"
+      message: Deployment does not have minimum availability.
+      reason: MinimumReplicasUnavailable
+      status: "False"
+      type: Available
+    observedGeneration: 1
+    replicas: 1
+    unavailableReplicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-05T18:55:09Z"
+    generation: 1
+    labels:
+      app: coffee
+      pod-template-hash: 6f758cc7cc
+    name: coffee-6f758cc7cc
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: coffee
+      uid: e37634aa-c89d-4c80-ba46-5a92852e02f4
+    resourceVersion: "300728"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/coffee-6f758cc7cc
+    uid: fc984e3d-db39-412a-ad8a-7591a16b040d
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: coffee
+        pod-template-hash: 6f758cc7cc
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: coffee
+          pod-template-hash: 6f758cc7cc
+      spec:
+        containers:
+        - image: nginxdemos/hello:plain-text
+          imagePullPolicy: IfNotPresent
+          name: coffee
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "5"
+      deployment.kubernetes.io/max-replicas: "7"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-05T18:05:03Z"
+    generation: 3
+    labels:
+      app: microbot
+      pod-template-hash: 7dd47b8fd6
+    name: microbot-7dd47b8fd6
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: microbot
+      uid: 01aeb342-6153-4507-95a5-dc1d4ea6bae8
+    resourceVersion: "300743"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/microbot-7dd47b8fd6
+    uid: 8bb8d8c4-ec09-477b-b4e1-be599c849591
+  spec:
+    replicas: 5
+    selector:
+      matchLabels:
+        app: microbot
+        pod-template-hash: 7dd47b8fd6
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: microbot
+          pod-template-hash: 7dd47b8fd6
+      spec:
+        containers:
+        - image: dontrebootme/microbot:v1
+          imagePullPolicy: IfNotPresent
+          name: microbot
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    fullyLabeledReplicas: 5
+    observedGeneration: 3
+    replicas: 5
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-05T16:57:15Z"
+    generation: 1
+    labels:
+      pod-template-hash: 555485ff9b
+      run: my-nginx
+    name: my-nginx-555485ff9b
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: my-nginx
+      uid: 8f8c8602-1b18-4236-94fc-130c565b2671
+    resourceVersion: "300758"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/my-nginx-555485ff9b
+    uid: 55eba25d-ae17-4582-b114-b203e5ac0d86
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        pod-template-hash: 555485ff9b
+        run: my-nginx
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          pod-template-hash: 555485ff9b
+          run: my-nginx
+      spec:
+        containers:
+        - image: nginx
+          imagePullPolicy: Always
+          name: my-nginx
+          ports:
+          - containerPort: 8000
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-10-05T18:55:10Z"
+    generation: 1
+    labels:
+      app: tea
+      pod-template-hash: b88549687
+    name: tea-b88549687
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: tea
+      uid: 0e88a843-520a-43f7-ad67-dfafdf2d18fc
+    resourceVersion: "300771"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/tea-b88549687
+    uid: 86d4ce2f-61b4-4dcc-a24a-3b8c4a19701b
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: tea
+        pod-template-hash: b88549687
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: tea
+          pod-template-hash: b88549687
+      spec:
+        containers:
+        - image: nginxdemos/hello:plain-text
+          imagePullPolicy: IfNotPresent
+          name: tea
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-09-15T02:15:46Z"
+    generation: 1
+    labels:
+      deployment: wso2-elastic-search
+      pod-template-hash: 55f7f87d6
+    name: wso2-elastic-search-55f7f87d6
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: wso2-elastic-search
+      uid: b98a6490-d078-4bfd-9ad9-76aa40a91625
+    resourceVersion: "300774"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/wso2-elastic-search-55f7f87d6
+    uid: 10bb5830-d4d6-41eb-b3df-cd51e63eed07
+  spec:
+    minReadySeconds: 30
+    replicas: 1
+    selector:
+      matchLabels:
+        deployment: wso2-elastic-search
+        pod-template-hash: 55f7f87d6
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          deployment: wso2-elastic-search
+          pod-template-hash: 55f7f87d6
+      spec:
+        containers:
+        - env:
+          - name: discovery.type
+            value: single-node
+          - name: ES_JAVA_OPTS
+            value: -Xms256m -Xmx256m
+          - name: network.host
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: PROCESSORS
+            valueFrom:
+              resourceFieldRef:
+                divisor: "0"
+                resource: limits.cpu
+          image: docker.elastic.co/elasticsearch/elasticsearch:6.5.3
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            tcpSocket:
+              port: 9200
+            timeoutSeconds: 1
+          name: wso2-elastic-search
+          ports:
+          - containerPort: 9200
+            name: http
+            protocol: TCP
+          - containerPort: 9300
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /_cluster/health
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: "1"
+            requests:
+              cpu: 250m
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - sysctl
+          - -w
+          - vm.max_map_count=262144
+          image: busybox:1.27.2
+          imagePullPolicy: IfNotPresent
+          name: init-sysctl
+          resources: {}
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-09-15T02:15:47Z"
+    generation: 1
+    labels:
+      deployment: wso2-kibana
+      pod-template-hash: 6f9bf7c895
+    name: wso2-kibana-6f9bf7c895
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: wso2-kibana
+      uid: acc2f7e7-1f15-4b88-9d76-a7e967f2e0d3
+    resourceVersion: "300778"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/wso2-kibana-6f9bf7c895
+    uid: 4a98c5c2-26dc-4971-8340-ca6bd2563b42
+  spec:
+    minReadySeconds: 30
+    replicas: 1
+    selector:
+      matchLabels:
+        deployment: wso2-kibana
+        pod-template-hash: 6f9bf7c895
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          deployment: wso2-kibana
+          pod-template-hash: 6f9bf7c895
+      spec:
+        containers:
+        - env:
+          - name: NODE_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          image: docker.elastic.co/kibana/kibana:6.5.3
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            tcpSocket:
+              port: 5601
+            timeoutSeconds: 1
+          name: wso2-kibana
+          ports:
+          - containerPort: 5601
+            name: http
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /api/status
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 90
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /usr/share/kibana/config/kibana.yml
+            name: kibana-yml
+            subPath: kibana.yml
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - sh
+          - -c
+          - until nslookup wso2-elasticsearch-service; do echo waiting for wso2-elasticsearch-service;
+            sleep 2; done;
+          image: busybox
+          imagePullPolicy: Always
+          name: init-wso2-elasticsearch-service
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: kibana-yml
+          name: kibana-yml
+  status:
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2019-09-15T02:15:58Z"
+    generation: 1
+    labels:
+      deployment: wso2apim
+      pod-template-hash: 7667b55dc7
+    name: wso2apim-7667b55dc7
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: wso2apim
+      uid: 97d17fa4-bfa3-4e7b-b8f8-1d6c5ab0f203
+    resourceVersion: "151909"
+    selfLink: /apis/apps/v1/namespaces/default/replicasets/wso2apim-7667b55dc7
+    uid: 365b2a20-8e3d-4a13-ac38-eaaaa7f1be90
+  spec:
+    minReadySeconds: 30
+    replicas: 1
+    selector:
+      matchLabels:
+        deployment: wso2apim
+        pod-template-hash: 7667b55dc7
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          deployment: wso2apim
+          pod-template-hash: 7667b55dc7
+      spec:
+        containers:
+        - image: wso2/wso2am:2.6.0
+          imagePullPolicy: Always
+          livenessProbe:
+            exec:
+              command:
+              - /bin/bash
+              - -c
+              - nc -z localhost 9443
+            failureThreshold: 3
+            initialDelaySeconds: 150
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: wso2apim
+          ports:
+          - containerPort: 8280
+            protocol: TCP
+          - containerPort: 8243
+            protocol: TCP
+          - containerPort: 9763
+            protocol: TCP
+          - containerPort: 9443
+            protocol: TCP
+          - containerPort: 5672
+            protocol: TCP
+          - containerPort: 9711
+            protocol: TCP
+          - containerPort: 9611
+            protocol: TCP
+          - containerPort: 7711
+            protocol: TCP
+          - containerPort: 7611
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - /bin/bash
+              - -c
+              - nc -z localhost 9443
+            failureThreshold: 3
+            initialDelaySeconds: 150
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /home/wso2carbon/wso2am-2.6.0/repository/logs/
+            name: shared-logs
+        - env:
+          - name: NODE_ID
+            value: wso2-apim
+          - name: NODE_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          image: maanadev/logstash:6.5.3-custom
+          imagePullPolicy: IfNotPresent
+          name: logstash
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /usr/share/logstash/mylogs/
+            name: shared-logs
+          - mountPath: /usr/share/logstash/config/logstash.yml
+            name: logstash-yml
+            subPath: logstash.yml
+          - mountPath: /usr/share/logstash/pipeline/logstash.conf
+            name: logstash-conf
+            subPath: logstash.conf
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - sh
+          - -c
+          - until nc -z wso2-elasticsearch-service 9200; do echo waiting for wso2-elasticsearch-service;
+            sleep 2; done;
+          image: busybox
+          imagePullPolicy: Always
+          name: init-wso2-elasticsearch-service
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: shared-logs
+        - configMap:
+            defaultMode: 420
+            name: logstash-yml
+          name: logstash-yml
+        - configMap:
+            defaultMode: 420
+            name: logstash-conf
+          name: logstash-conf
+  status:
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    replicas: 1
+- apiVersion: batch/v1
+  kind: Job
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"job-wq-1","namespace":"default"},"spec":{"completions":8,"parallelism":2,"template":{"metadata":{"name":"job-wq-1"},"spec":{"containers":[{"env":[{"name":"BROKER_URL","value":"amqp://guest:guest@rabbitmq-service:5672"},{"name":"QUEUE","value":"job1"}],"image":"seshgirik/amqp:30","name":"c"}],"restartPolicy":"OnFailure"}}}}
+    creationTimestamp: "2019-09-01T13:51:24Z"
+    labels:
+      controller-uid: ecef790e-efcb-4434-86fb-c02a0cadca7d
+      job-name: job-wq-1
+    name: job-wq-1
+    namespace: default
+    resourceVersion: "47473"
+    selfLink: /apis/batch/v1/namespaces/default/jobs/job-wq-1
+    uid: ecef790e-efcb-4434-86fb-c02a0cadca7d
+  spec:
+    backoffLimit: 6
+    completions: 8
+    parallelism: 2
+    selector:
+      matchLabels:
+        controller-uid: ecef790e-efcb-4434-86fb-c02a0cadca7d
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          controller-uid: ecef790e-efcb-4434-86fb-c02a0cadca7d
+          job-name: job-wq-1
+        name: job-wq-1
+      spec:
+        containers:
+        - env:
+          - name: BROKER_URL
+            value: amqp://guest:guest@rabbitmq-service:5672
+          - name: QUEUE
+            value: job1
+          image: seshgirik/amqp:30
+          imagePullPolicy: IfNotPresent
+          name: c
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: OnFailure
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    conditions:
+    - lastProbeTime: "2019-09-01T13:53:16Z"
+      lastTransitionTime: "2019-09-01T13:53:16Z"
+      message: Job has reached the specified backoff limit
+      reason: BackoffLimitExceeded
+      status: "True"
+      type: Failed
+    failed: 2
+    startTime: "2019-09-01T13:51:24Z"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
