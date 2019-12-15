@@ -1,0 +1,76 @@
+pod-with-node-affinity.yaml
+
+# This pod schedules on nodes which has lable ram sita
+# mk taint -h
+# mk taint node sesh ram=sita:NoSchedule
+# any pod which doen't have tolerate ram=sita doesn't schedule
+# Warning  FailedScheduling  3m9s (x6 over 8m52s)  default-scheduler  0/1 nodes are available: 1 node(s) didn't match node selector.
+# Warning  FailedScheduling  39s (x3 over 107s)    default-scheduler  0/1 nodes are available: 1 node(s) had taints that the pod didn't tolerate.
+# mk describe node sesh
+# mk label -h
+# mk label sesh ram=sita
+# mk label node sesh ram=sita
+# to remove taint use -
+# mk taint node sesh ram=sita:NoSchedule-
+
+=================================================================================================================
+pod runs on nodes which did't schedule pods with  lable  "app: store"
+replcas-NOcolocation.yaml
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - store
+
+
+
+=================================================================================================================
+replcas-colocation.yaml
+pods runs on nodes which doen't have pods with  lable  "app: store"
+
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - store
+
+=================================================================================================================
+
+
+pod runs on nodes which schedule pods with  lable  "ram: sita"
+pod runs on nodes which did't schedule pods with  lable  "security: S2"
+node topology ie node should have label failure-domain.beta.kubernetes.io/zone
+
+The pod affinity rule says that the pod can be scheduled onto a node only if that node is in the same zone as at least one already-running pod that has a label with key “ram” and value “sita”. (More precisely, the pod is eligible to run on node N if node N has a label with key failure-domain.beta.kubernetes.io/zone and some value V such that there is at least one node in the cluster with key 
+
+
+mk label node sesh failure-domain.beta.kubernetes.io/zone=blr
+mk label pod redis-cache-5f4f55fc9b-c2s6c ram=sita
+
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: ram
+            operator: In
+            values:
+            - sita
+        topologyKey: failure-domain.beta.kubernetes.io/zone
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: security
+              operator: In
+              values:
+              - S2
+          topologyKey: failure-domain.beta.kubernetes.io/zone
+

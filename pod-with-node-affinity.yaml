@@ -32,3 +32,16 @@ spec:
   containers:
   - name: with-node-affinity
     image: k8s.gcr.io/pause:2.0
+
+# This pod schedules on nodes which has lable ram sita
+# mk taint -h
+# mk taint node sesh ram=sita:NoSchedule
+# any pod which doen't have tolerate ram=sita doesn't schedule
+# Warning  FailedScheduling  3m9s (x6 over 8m52s)  default-scheduler  0/1 nodes are available: 1 node(s) didn't match node selector.
+# Warning  FailedScheduling  39s (x3 over 107s)    default-scheduler  0/1 nodes are available: 1 node(s) had taints that the pod didn't tolerate.
+# mk describe node sesh
+# mk label -h
+# mk label sesh ram=sita
+# mk label node sesh ram=sita
+# to remove taint use -
+# mk taint node sesh ram=sita:NoSchedule-

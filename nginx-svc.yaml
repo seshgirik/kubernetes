@@ -6,7 +6,9 @@ metadata:
     run: my-nginx
 spec:
   ports:
-  - port: 80
+  - port: 9000
+    targetPort: 8000
     protocol: TCP
+  type: LoadBalancer
   selector:
     run: my-nginx
